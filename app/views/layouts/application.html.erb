@@ -1,7 +1,8 @@
+<%= provide(:title,"Myapp")%>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title><%= yield(:title)%></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
