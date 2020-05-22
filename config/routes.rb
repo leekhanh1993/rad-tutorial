@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  
   resources :users
   get '/signup' => 'users#new'
   post '/signup',  to: 'users#create'
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy' 
+
+  #Activate Account
+  resources :account_activations, only: [:edit]
 
   root 'static_pages#home'
   
