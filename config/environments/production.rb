@@ -95,8 +95,8 @@ Rails.application.configure do
 
   # config send email through gmail
   config.action_mailer.delivery_method = :smtp
-  host = 'sleepy-journey-48671.herokuapp.com' #replace with your own url
-  config.action_mailer.default_url_options = { :host => "sleepy-journey-48671.herokuapp.com" }
+  # host = 'sleepy-journey-48671.herokuapp.com' #replace with your own url
+  config.action_mailer.default_url_options = { :host => "https://sleepy-journey-48671.herokuapp.com" }
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
