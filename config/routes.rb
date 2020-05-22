@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  get 'password_resets/new'
+  get 'password_resets/edit'
   resources :users
   get '/signup' => 'users#new'
   post '/signup',  to: 'users#create'
@@ -22,6 +24,9 @@ Rails.application.routes.draw do
 
   #Activate Account
   resources :account_activations, only: [:edit]
+
+  #Reset password
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   root 'static_pages#home'
   
